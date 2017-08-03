@@ -17,6 +17,8 @@ document.onkeyup = function(event) {
 		alert("You guessed Correct!");
 		// if user guesses the correct letter. add a win to record
 		wins++;
+		guessesLeft=10;
+		wrongGuesses=[];
 		//reset
 	}
 	else {
@@ -37,12 +39,10 @@ document.onkeyup = function(event) {
 
 	var html=
 	"<p>Wins: " + wins + "</p>" +
+	"<p>Loses: " + loses + "</p>" +
 	"<p>Guesses Left: " + guessesLeft + "</p>" +
 	"<p>Letters Guessed: " + wrongGuesses + "</p>";
 
 	document.querySelector("#game").innerHTML = html;
 
-// 	if (guessesLeft===0) {
-// 			alert(You Lose!!!!);
-// }
 };
